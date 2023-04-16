@@ -1,0 +1,67 @@
+// project specific variables
+$theme-color--default: #408ed4;
+$theme-color--heading: #333333;
+$theme-color--breadcrumb: #f8f8f8;
+$theme-background: #ebebeb;
+$theme-color--black: #3d3d3d;
+$transition--default: 0.3s;
+
+// Font Family
+$font-family-name: "Lato", sans-serif;
+$heading-font-family-name: "Lato", sans-serif;
+
+// Colors
+$white: #FFFFFF;
+$black: #000000;
+
+// Body Text
+$body-text-color: #3d3d3d;
+$body-font-weight: 400;
+$body-line-height: 25px;
+$body-font-size: 14px;
+$body-bg-color: $white;
+
+// Heading Text
+$heading-text-color: $theme-color--black;
+$heading-color-2: #232323;
+$heading-font-weight: 700;
+
+// Other Colors
+$primary: #f9ba48;
+$secondary: #a8a8a8;
+$mix-primary: #fedd16;
+$success: #c2c2c2;
+$borderright: #cccccc;
+$info: #e12e2e;
+$subscribe: #f1d411;
+$bodypara: #6f6f6f;
+$hovercolor: #43b031;
+$border: #e4e3e3;
+$borderbottom: #ebebeb;
+$borderall: #ebebeb;
+$section: #666666;
+$slid-btn: #2d75b5;
+$mix-slid: #2b75b5;
+$mix-product: #3c74b9;
+$same-white: #f3f3f3;
+$ship: #959595;
+$action-link: #555555;
+$oldprice: #acacac;
+
+// Social Color
+$android: #176ab4;
+$facebook: #448ccb;
+$twitter: #00bff3;
+$youtube: #d02d2d;
+$google: #f85858;
+$linkedin: #555555;
+$pinterest: #ce1f21;
+
+// Responsive Variables
+$laptop-device: "only screen and (min-width: 1200px) and (max-width: 1499px)";
+$desktop-device: "only screen and (min-width: 992px) and (max-width: 1199px)";
+$default-tablet-width: "only screen and (max-width: 991px)";
+$tablet-device: "only screen and (min-width: 768px) and (max-width: 991px)";
+$large-mobile: "only screen and (max-width: 767px)";
+$small-mobile: "only screen and (max-width: 575px)";
+$extra-small-mobile: "only screen and (max-width: 479px)";

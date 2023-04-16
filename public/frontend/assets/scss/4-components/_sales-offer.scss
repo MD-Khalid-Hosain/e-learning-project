@@ -1,0 +1,147 @@
+/*============================================
+=       12. Sale Offer css area start        =
+=============================================*/
+.flash-single-item{
+    border: 2px solid $theme-color--default;
+    padding: 24px;
+    position: relative;
+    @media #{$desktop-device, $default-tablet-width}{
+        padding: 15px;
+    }
+    .product-item{
+        overflow: hidden;
+        .offer-bar{
+            position: absolute;
+            top: -6px;
+            left: -6px;
+            z-index: 99;
+        }
+    }
+    .product-thumb {
+        width: 40%;
+        float: left;
+        display: block;
+        overflow: hidden;
+        position: relative;
+        @media #{$large-mobile, $small-mobile, $extra-small-mobile}{
+            width: 100%;
+            max-width: 300px;
+            float: none;
+            margin: 0 auto;
+        }
+    }
+    .product-caption {
+        float: left;
+        width: 55%;
+        padding: 24px;
+        @media #{$desktop-device, $default-tablet-width}{
+            padding: 15px;
+        }
+        @media #{$large-mobile, $small-mobile, $extra-small-mobile}{
+            float: none;
+            width: 100%;
+        }
+        .product-name{
+            h6{
+                color: $mix-product;
+                @media #{$desktop-device, $default-tablet-width}{
+                    font-size: 14px;
+                }
+            }
+            @media #{$desktop-device, $default-tablet-width}{
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+.single-countdown {
+    display: inline-block;
+    margin-right: 10px;
+    text-align: center;
+    span.single-countdown_time {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 45px;
+        margin-bottom: 5px;
+        background: $slid-btn;
+        color: $white;
+        height: 45px;
+        width: 60px;
+        text-align: center;
+        border-radius: 5px;
+        display: block;
+        overflow: hidden;
+    }
+    &:last-child{
+        margin-right: 0px;
+    }
+}
+.countdown-title {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    line-height: 18px;
+}
+@media #{$desktop-device, $default-tablet-width}{
+    .flash-single-item{
+        .price-box{
+            margin: 10px 0;
+        }
+        .product-pre-content{
+            margin-bottom: 15px;
+        }
+    }
+}
+.home2-product{
+    .slick-custom-default {
+        .slick-slide {
+            padding: 40px 5px 20px 5px;
+        }
+    }
+    .flash-single-item{
+        padding: 10px 10px 20px 10px;
+        .product-thumb{
+            float: none;
+            width: 100%;
+            text-align: center;
+            @media #{$tablet-device}{
+                float: left;
+                width: 40%;
+            }
+        }
+        .product-caption{
+            float: none;
+            width: 100%;
+            text-align: center;
+            padding: 0px;
+            @media #{$tablet-device}{
+                float: left;
+                width: 60%;
+                padding: 20px 20px 0px 20px;
+                text-align: left;
+            }
+            .product-pre-content{
+                margin-bottom: 10px;
+            }
+        }
+    }
+    .single-countdown {
+        span.single-countdown_time {
+            line-height: 40px;
+            margin-bottom: 5px;
+            height: 40px;
+            width: 50px;
+            @media #{$desktop-device}{
+                font-size: 14px;
+                line-height: 30px;
+                height: 30px;
+                width: 35px;
+            }
+        }
+    }
+}
+/*============================================
+=         Sale Offer css area End          =
+=============================================*/
+  

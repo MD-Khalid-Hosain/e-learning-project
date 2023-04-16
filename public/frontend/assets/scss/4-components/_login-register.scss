@@ -1,0 +1,35 @@
+/*======================================
+=     23. login Register CSS Start     =
+========================================*/
+.show-btn {
+    color: $white;
+    background: $body-text-color;
+    padding: 6px 20px;
+    top: 26px;
+    position: absolute;
+    right: 5px;
+    border: 1px solid $body-text-color;
+    &:hover{
+        background: $theme-color--default;
+        border: 1px solid $theme-color--default;
+    }
+}
+.form_group {
+    .input-login{
+        width: 90%;
+        padding-right: 30px;
+    }
+}
+.register-page{
+    a{
+        font-weight: 700;
+    }
+}
+.login-area{
+    .last-title{
+        width: 100%;
+    }
+}
+/*======================================
+=       login Register CSS End       =
+========================================*/

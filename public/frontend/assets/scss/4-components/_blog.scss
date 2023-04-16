@@ -1,0 +1,444 @@
+/*======================================
+=          19. Blog CSS Start          =
+========================================*/
+/*-----=====----- Blog Grid Css Start-----=====-----*/
+.blog-image{
+    a{
+        display: block;
+        img{
+            width: 100%;
+        }
+    }
+}
+.single-blog{
+    .blog-content{
+        .meta{
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+            padding-left: 0;
+            list-style: none;
+            li{
+                font-size: 14px;
+                font-weight: 600;
+                line-height: 1.25;
+                margin-right: 15px;
+                i{
+                    margin-right: 5px;
+                    color: #999;
+                }
+                a{
+                    border-bottom: 1px solid transparent;
+                    &:hover{
+                        color: #333;
+                        border-color: rgba(51,51,51,0.2);
+                    }
+                }
+            }
+        }
+        .title{
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        .desc{
+            margin-bottom: 15px;
+            p{
+                font-size: 15px;
+                line-height: 25px;
+            }
+        }
+        .link{
+            font-size: 16px;
+            text-transform: uppercase;
+            border-bottom: 1px solid $border;
+            &:hover{
+                border-color: $theme-color--default;
+            }
+        }
+    }
+}
+.blog-slider{
+    .arrow-button{
+        position: absolute;
+        top: 50%;
+        transform: translatey(-50%);
+        background: $theme-color--default;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 20px;
+        color: $white;
+        left: 40px;
+        z-index: 99;
+        text-align: center;
+        border-radius: 50%;
+        transition: 0.5s;
+        cursor: pointer;
+        opacity: 0;
+        visibility: hidden;
+    }
+    &:hover{
+        .arrow-button{
+            opacity: .8;
+            visibility: visible;
+        }
+        .arrow-left{
+            left: 20px;
+        }
+        .arrow-right{
+            right: 20px;
+        }
+        
+    }
+    .arrow-left{
+        left: 40px;
+    }
+    .arrow-right{
+        right: 40px;
+        left: auto;
+    }
+}
+.margin-blog{
+    margin-top: 50px;
+    @media #{$default-tablet-width}{
+        margin-top: 20px;
+    }
+}
+/*-----=====----- Blog Grid Css End-----=====-----*/
+/*-----=====----- Blog List Css Start-----=====-----*/
+.blog-list-view{
+    .single-blog{
+        display: flex;
+        align-items: center;
+        @media #{$large-mobile}{
+            display: block;
+        }
+    }
+    .blog-image, .blog-video{
+        width: 40%;
+        float: left;
+        @media #{$tablet-device}{
+            width: 41%;
+        }
+        @media #{$large-mobile}{
+            width: 100%;
+            float: none;
+            margin-bottom: 20px;
+        }
+    }
+    .blog-content{
+        width: 50%;
+        float: left;
+        align-items: center;
+        margin: 0px 0px 0px 30px;
+        @media #{$tablet-device}{
+            width: 54%;
+            margin: 0px 0 0 20px !important;
+        }
+        @media #{$large-mobile}{
+            width: 100%;
+            float: none;
+            margin: 30px 0px 0px 0px !important;
+        }
+    }
+}
+.blog-list-sidebar-view{
+    .blog-image, .blog-video{
+        @media #{$desktop-device}{
+            width: 45%;
+        }
+    }
+    .blog-content{
+        margin: 0px 0px 0px 30px;
+        @media #{$desktop-device}{
+            width: 52%;
+            margin: 0 0 0 20px;
+        }
+    }
+}
+/*-----=====----- Blog List Css End-----=====-----*/
+/*-----=====----- Blog Sidebar Start-----=====-----*/
+.widget-sidebar{
+    .sidebar-title{
+        .title-shop{
+            margin-bottom: 20px;
+        }
+    }
+}
+.category-search{
+    position: relative;
+    .search-hear{
+        background: transparent none repeat scroll 0 0;
+        border: 1px solid $borderall;
+        border-radius: 0;
+        color: $theme-color--black;
+        height: 47px;
+        line-height: 47px;
+        padding-left: 20px;
+        width: 100%;
+        padding-right: 80px;
+        font-size: 16px;
+    }
+    .srch-btn{
+        background: $theme-color--default;
+        height: 47px;
+        line-height: 47px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transition: all 0.3s ease 0s;
+        &:hover{
+            background: $theme-color--black;
+        }
+        i{
+            color: $white;
+            display: block;
+            font-size: 20px;
+            line-height: 45px;
+            text-align: center;
+            width: 50px;
+        }
+    }
+}
+.single-blog-thumb{
+    margin-bottom: 20px;
+    .blog-thumb{
+        margin-right: 10px;
+    }
+    .blog-info{
+        .info-title{
+            font-size: 16px;
+            font-weight: 600;
+        }
+        span{
+            margin-top: 10px;
+            display: block;
+        }
+    }
+}
+.tag-widget{
+    ul{
+        li{
+            display: inline-block;
+            margin: 0px 5px 5px 0px;
+            a{
+                padding: 5px 16px;
+                border: 1px solid $borderall;
+                font-size: 14px;
+                &:hover{
+                    background: $theme-color--default;
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+/*-----=====----- Blog Sidebar End-----=====-----*/
+/*-----=====----- Blog Details Css Start-----=====-----*/
+.desc{
+    & > p{
+        line-height: 24px;
+        margin-bottom: 10px;
+        font-size: 15px;
+    }
+    & blockquote{
+        border-left: 3px solid $mix-product;
+        margin: 20px 0 20px 100px;
+        padding: 20px;
+        font-style: italic;
+        @media #{$extra-small-mobile}{
+            margin-left: 50px;
+        }
+    }
+}
+.last-title{
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+.desc-content{
+    border-bottom: 1px solid $borderbottom;
+    padding-bottom: 26px;
+    margin-bottom: 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media #{$small-mobile}{
+        display: block;
+        text-align: center;
+    }
+    .social_sharing{
+        @media #{$small-mobile}{
+            display: block !important;
+        }
+        h5{
+            font-size: 14px;
+            text-transform: uppercase;
+            margin-right: 20px;
+            line-height: 26px;
+            margin-bottom: 0;
+            font-weight: 700;
+            @media #{$small-mobile}{
+                margin-right: 5px;
+            }
+        }
+        ul{
+            li{
+                display: inline-block;
+                a{
+                    background: $theme-background;
+                    border-radius: 100%;
+                    display: inline-block;
+                    font-size: 12px;
+                    height: 26px;
+                    line-height: 26px;
+                    margin-right: 5px;
+                    text-align: center;
+                    width: 26px;
+                    &:hover{
+                        background: $theme-color--default;
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.comments_box{
+    margin-bottom: 40px;
+    border-top: 1px solid $border;
+    padding-top: 17px;
+    & h3{
+        font-size: 20px;
+        margin: 0 0 20px;
+        font-weight: 600;
+        line-height: 28px;
+    }
+}
+.comment_list{
+    overflow: hidden;
+    margin-bottom: 30px;
+    &:last-child{
+        margin-bottom: 0;
+    }
+    & .comment_thumb{
+        float: left;
+        @media #{$large-mobile}{
+           width: 40px;
+        }
+    }
+    & .comment_content{
+       margin-left: 70px;
+        position: relative;
+        border: 1px solid $borderall;
+        border-radius: 3px;
+        padding: 15px;
+        @media #{$large-mobile}{
+            margin-left: 55px;
+        }
+        & h5{
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase; 
+            margin-bottom: 5px;
+            & a{
+                &:hover{
+                    color: $mix-product;
+                }
+            }
+        }
+        & span{
+            line-height: 18px;
+            margin-bottom: 8px;
+            font-size: 12px;
+            font-style: italic;
+            display: inline-block;
+        }
+        & p{
+            margin-bottom: 0;
+            font-size: 14px;
+        }
+    }
+}
+.comment_reply{
+    position: absolute;
+    top: 20px;
+    right: 12px;
+    @media #{$large-mobile}{
+      top: 15px
+    }
+    & a{
+        padding: 2px 10px;
+        border-radius: 3px;
+        color: $white;
+        background: $ship;
+        display: block;
+        &:hover{
+            background: $mix-product;
+        }
+    }
+}
+.comment_list.list_two {
+	padding-left: 50px;
+    @media #{$large-mobile}{
+       padding-left: 0;
+    }
+}
+.comments_form{
+    & h3{
+        font-size: 20px;
+        margin: 0 0 20px;
+        font-weight: 600;
+        line-height: 28px;
+    }
+    & p{
+        font-size: 14px;
+        line-height: 17px;
+        margin-bottom: 12px;
+    }
+    & form{
+         & .row{
+            @media #{$tablet-device}{
+               flex-direction: row;
+            }
+        }
+        & label{
+            color: $theme-color--heading;
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        & textarea{
+            width: 100%;
+            height: 200px;
+            background: $white;
+            border: 1px solid $border;
+            margin-bottom: 10px;
+            resize: none;
+            padding: 10px;
+        }
+        & input{
+            width: 100%;
+            height: 40px;
+            border: 1px solid $border;
+            margin-bottom: 15px;
+            padding: 0 20px;
+        }
+        & button{
+            border: 0;
+            line-height: 36px;
+            background: $theme-color--default;
+            color: $white;
+            font-weight: 500;
+            &:hover{
+               background: $theme-color--heading;
+            }
+        }
+    }
+}
+/*-----=====----- Blog Details Css End-----=====-----*/
+/*======================================
+=             Blog CSS Start           =
+========================================*/

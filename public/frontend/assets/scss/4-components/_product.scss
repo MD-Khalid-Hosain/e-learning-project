@@ -1,0 +1,264 @@
+/*============================================
+=         11. Product css area start         =
+=============================================*/
+.item-product {
+    transition: $transition--default;
+    &:hover {
+        box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
+        transition: $transition--default;
+        .action-link {
+            opacity: 1;
+            transition: $transition--default;
+            a {
+                font-size: 16px;
+                height: 36px;
+                width: 36px;
+                line-height: 36px;
+            }
+        }
+    }
+    @media #{$small-mobile, $extra-small-mobile}{
+        max-width: 240px;
+        width: 100%;
+        margin: 0 auto;
+        display: block !important;
+    }
+}
+.double-product{
+    @media #{$small-mobile, $extra-small-mobile}{
+        margin: 0 auto 20px auto;
+    }
+}
+.product-thumb {
+    position: relative;
+    padding-bottom: 10px;
+    display: block;
+    text-align: center;
+    img {
+        display: block;
+    }
+    .label-product-new {
+        position: absolute;
+        top: 9px !important;
+        left: 9px;
+        display: inline-block;
+        background: $theme-color--default;
+        color: $white;
+        border-radius: 100% 100% 100% 0%;
+        text-align: center;
+        line-height: 32px;
+        height: 32px;
+        width: 32px;
+        font-size: 11px;
+        font-weight: 700;
+    }
+    .label-product-discount {
+        position: absolute;
+        top: 9px !important;
+        right: 9px;
+        display: inline-block;
+        background: $info;
+        color: $white;
+        border-radius: 100% 100% 100% 0%;
+        text-align: center;
+        line-height: 32px;
+        height: 32px;
+        width: 32px;
+        font-size: 11px;
+        font-weight: 700;
+    }
+}
+.action-link {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+    opacity: 0;
+    transition: .3s;
+    a {
+        display: inline-block;
+        background: $action-link;
+        padding: 0;
+        color: $white;
+        border: none;
+        line-height: 20px;
+        height: 20px;
+        width: 20px;
+        font-size: 0;
+        text-align: center;
+        text-transform: capitalize;
+        border-radius: 100%;
+        margin-right: 5px;
+        &:hover {
+            background: $theme-color--default;
+            border-color: $theme-color--default;
+            color: $white;
+            transition: all 300ms ease-in;
+            i {
+                font-size: 16px;
+                line-height: 36px;
+            }
+        }
+    }
+}
+.product-caption {
+    padding: 17px 14px 20px 14px;
+    background: $white;
+    position: relative;
+    .product-name {
+        a {
+            line-height: 22px;
+            display: block;
+            overflow: hidden;
+            color: $mix-product;
+            font-size: 14px;
+            margin-bottom: 5px;
+            transition: $transition--default;
+            font-weight: 700;
+            &:hover {
+                transition: $transition--default;
+            }
+        }
+    }
+}
+.yellow {
+    i {
+        color: $primary;
+    }
+}
+.default-star{
+    i{
+        color: $secondary;
+    }
+}
+.cart {
+    position: absolute;
+    right: 10px;
+    bottom: 20px;
+    transition: $transition--default;
+    &:hover{
+        a{
+            background: $theme-color--default;
+            transition: $transition--default;
+            i{
+                color: $white;
+                transition: $transition--default;
+            }
+        }
+    }
+    a{
+        background: $success;
+        border-radius: 100%;
+        height: 40px;
+        width: 40px;
+        text-align: center;
+        transition: $transition--default;
+    }
+    i{
+        font-size: 20px;
+        line-height: 40px;
+    }
+}
+.rating {
+    margin-bottom: 4px;
+}
+.price-box{
+    .regular-price {
+        font-size: 14px;
+        font-weight: 900;
+        color: $info;
+        margin-right: 5px;
+    }
+    .old-price {
+        font-size: 14px;
+        font-weight: 600;
+        color: $oldprice;
+    }
+}
+.slick-custom-default {
+    display: block;
+    .slick-slide{
+        padding: 40px 10px 5px 10px;
+    }
+}
+.slick-custom{
+    .arrow-right {
+        position: absolute;
+        right: 0px;
+        background: $white;
+        padding-left: 5px;
+    }
+    .arrow-left {
+        position: absolute;
+        right: 14px;
+        background: $white;
+        padding-left: 20px;
+        padding-right: 5px;
+    }
+    .arrow-button{
+        top: -15px;
+        border: 0px;
+        color: $secondary;
+        font-size: 24px;
+        cursor: pointer;
+        z-index: 99;
+        &:hover{
+            color: $theme-color--default;
+        }
+    }
+}
+.theme-tabs {
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    li {
+        display: inline-block;
+        margin-bottom: -8px !important;
+        overflow: hidden;
+        a {
+            z-index: 2;
+            background: $same-white;
+            padding: 0 35px;
+            vertical-align: bottom;
+            border-radius: 5px 5px 0 0;
+            margin-right: 2px;
+            line-height: 39px;
+            cursor: pointer;
+            color: $secondary;
+            text-transform: capitalize;
+            font-size: 16px;
+            font-weight: 700;
+            transition: all 300ms ease-in;
+            &:hover {
+                color: $white;
+                background: $theme-color--default;
+                line-height: 46px;
+                transition: all 300ms ease-in;
+            }
+            @media #{$default-tablet-width}{
+                font-size: 14px;
+                padding: 0 15px;
+            }
+            @media #{$extra-small-mobile}{
+                font-size: 10px;
+                padding: 0 5px;
+                line-height: 28px;
+                margin-right: 0px;
+            }
+        }
+        a.active {
+            color: $white !important;
+            background-color: $theme-color--default !important;
+            line-height: 46px;
+            transition: all 300ms ease-in;
+            @media #{$extra-small-mobile}{
+                line-height: 30px;
+            }
+        }
+    }
+}
+/*============================================
+=           Product css area End            =
+=============================================*/

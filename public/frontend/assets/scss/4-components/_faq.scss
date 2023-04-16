@@ -1,0 +1,56 @@
+/*======================================
+=  27. Frequently Questions CSS Start  =
+========================================*/
+.faq-desc {
+    margin-bottom: 20px;
+}
+.faq-accordion{
+    .card{
+        border-radius: 0;
+        margin-bottom: 10px;
+        .show{
+            border-top: 1px solid $border;
+        }
+    }
+    .card-body {
+        font-size: 14px;
+    }
+    .card-header {
+        padding: 0;
+        margin-bottom: 0;
+        background-color: $same-white;
+        border: 0;
+        h5{
+            margin: 0;
+            background: $white;
+            font-size: 18px;
+            padding-right: 35px;
+        }
+        a{
+            display: block;
+            padding: 15px 10px 15px 25px;
+            cursor: pointer;
+            &:hover {
+                color: $theme-color--default;
+            }
+        }
+    }
+}
+.faq-accordion .card-header a.collapsed:before,
+.faq-accordion .card-header a:after {
+    content: "\f067";
+    font-family: FontAwesome;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+.faq-accordion .card-header a:after {
+    content: "\f068";
+    font-family: FontAwesome;
+}
+.faq-margin{
+    margin-bottom: 20px !important;
+}
+/*======================================
+=    Frequently Questions CSS End    =
+========================================*/

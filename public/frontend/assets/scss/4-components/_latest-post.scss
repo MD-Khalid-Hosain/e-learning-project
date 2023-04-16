@@ -1,0 +1,100 @@
+/* ==========================================
+=          17. Latest Post CSS Start        =
+============================================= */
+.single_blog{
+    display: block;
+    overflow: hidden;
+
+    .blog_thumb{
+        float:left;
+        display: block;
+        width: 35%;
+        @media #{$desktop-device}{
+            width: 42%;
+        }
+        @media #{$large-mobile}{
+            width: 41%;
+            margin-right: 15px;
+        }
+        @media #{$extra-small-mobile}{
+            width: 100%;
+            float: none;
+            margin-bottom: 15px;
+        }
+    }
+    .blog_content{
+        width: 60%;
+        margin-left: 25px;
+        float: right;
+        @media #{$desktop-device}{
+            width: 55%;
+            float: left;
+            margin-left: 10px;
+
+            .date_post{
+                margin-top: 8px;
+                margin-bottom: 8px;
+            }
+        }
+        @media #{$large-mobile}{
+            width: 55%;
+            float: left;
+            margin-left: 0px;
+
+            .date_post{
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+        }
+        @media #{$extra-small-mobile}{
+            width: 100%;
+            float: none;
+            margin:0px;
+        }
+    }
+}
+.about-img{
+    img{
+        width: 100%;
+    }
+}
+.single_testimonial{
+    p{
+        margin-bottom: 20px;
+    }
+    img{
+        border: 2px solid $theme-color--default;
+        border-radius: 100%;
+        display: initial !important;
+    }
+    span{
+        display: block;
+        margin-top: 10px;
+
+        &.name{
+            font-size: 16px;
+            font-weight: 900;
+            color: $theme-color--default;
+        }
+    }
+    .rating{
+        span{
+            display: inline-block;
+        }
+    }
+}
+@media #{$default-tablet-width}{
+    .blog-post-carousel{
+        margin-bottom: 30px;
+    }
+}
+@media #{$extra-small-mobile}{
+    .blog-post-container {
+        max-width: 300px;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+/* ==========================================
+=             Latest Post CSS End           =
+============================================= */

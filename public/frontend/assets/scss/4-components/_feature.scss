@@ -1,0 +1,179 @@
+/* ===================================
+ =       15. Feature CSS Start       =
+==================================== */
+.block-title{
+    position: relative;
+
+    &:before{
+        position: absolute;
+        width: 50%;
+        content: "";
+        top: 45%;
+        left: 0px;
+        background: $borderbottom;
+        width: 100%;
+        height: 1px;
+    }
+    h6{
+        font-size: 18px;
+        font-weight: 900;
+        display: inline-block;
+        overflow: hidden;
+        padding-right: 20px;
+        background: $white;
+        position: relative;
+        z-index: 2;
+    }
+}
+.product-list-content {
+    .product-list-image {
+        display: block;
+        overflow: hidden;
+        float: left;
+        margin-right: 6px;
+        width: 100px;
+        height: 100px;
+        position:relative;
+
+        .block-two {
+            position: absolute;
+            top:0px;
+            left: 0px;
+            opacity: 0;
+        }
+        &:hover {
+            .block-one {
+                opacity: 0;
+            }
+            .block-two{
+                position: absolute;
+                top:0px;
+                left: 0px;
+                opacity: 1;
+            }
+        }
+    }
+    .product-caption {
+        width: 69%;
+        display: block;
+        overflow: hidden;
+        padding-bottom: 0px;
+        @media #{$desktop-device, $extra-small-mobile}{
+            width: 60%;
+            padding: 0px
+        }
+    }
+}
+.nav-top {
+    .arrow-button {
+        top: -28px;
+    }
+}
+.feature-carousel {
+    .slick-slide {
+        padding-top: 25px;
+    }
+}
+.home2-product, .home3-product {
+    .product-list-content {
+        .product-caption {
+            width: 59%;
+            @media #{$desktop-device}{
+                width: 47%;
+            }
+        }
+    }
+}
+.home3-product{
+    .list-home3{
+        .slick-slide{
+            padding: 20px 5px 0px 5px !important;
+        }
+    }
+}
+.home3-product{
+    .slick-custom-default{
+        .slick-slide {
+            padding: 40px 5px 20px 5px;
+        }
+    }
+    .left-side-wrapper{
+        .banner-area{
+            @media #{$default-tablet-width}{
+                float: left;
+                width: 40%;           
+            }
+            @media #{$large-mobile}{
+                float: none;
+                width: 100%;
+                text-align: center;           
+            }
+        }
+        .product-list-slidebar{
+            @media #{$default-tablet-width}{
+                float: left;
+                width: 55%;
+                margin-left: 15px;
+            }
+            @media #{$large-mobile}{
+                float: none;
+                width: 100%;
+                margin-left: 0px;
+            }
+        }
+    }
+}
+.home4-product-area{
+    .slick-custom-default{
+        .slick-slide {
+            padding: 40px 5px 20px 5px;
+        }
+    }
+    .left-side-wrapper{
+        .banner-area{
+            @media #{$default-tablet-width}{
+                float: left;
+                width: 44%;
+                text-align: right;
+            }
+            @media #{$large-mobile}{
+                float: none;
+                width: 100%;
+                text-align: center;           
+            }
+        }
+        .product-list-slidebar{
+            @media #{$default-tablet-width}{
+                float: left;
+                width: 56%;
+                margin-left: 0px;
+            }
+            @media #{$large-mobile}{
+                float: none;
+                width: 100%;
+                margin-right: 0px;
+            }
+        }
+    }
+}
+
+.feature-category-area{
+    .slick-custom-default{
+        .slick-slide{
+            @media #{$default-tablet-width}{
+                padding: 40px 0px 0px 0px;
+            }
+        }
+    }
+    .product-list-content{
+        .product-caption{
+            @media #{$default-tablet-width}{
+                padding: 10px 0px 0px 0px;
+                width: 60%;
+            }
+        }
+    } 
+}
+/* ===================================
+ =        Feature  CSS  End        =
+==================================== */

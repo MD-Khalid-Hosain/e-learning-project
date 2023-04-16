@@ -1,0 +1,63 @@
+/*============================================
+=         14. Banner css area start          =
+=============================================*/
+.single-banner {
+    overflow: hidden;
+    position: relative;
+    &:before {
+        background: rgba(255, 255, 255, 0.41) none repeat scroll 0 0;
+        content: "";
+        height: 0;
+        left: 0;
+        margin: auto;
+        opacity: 1;
+        position: absolute;
+        top: 0;
+        width: 0;
+        pointer-events: none;
+    }
+    &:hover:before{
+        height: 100%;
+        opacity: 0;
+        transition-duration: 1.3s;
+        width: 100%;
+    }
+    &:after {
+        background: rgba(255, 255, 255, 0.41) none repeat scroll 0 0;
+        bottom: 0;
+        content: "";
+        height: 0;
+        opacity: 1;
+        position: absolute;
+        right: 0;
+        width: 0;
+        pointer-events: none;
+    }
+    &:hover:after{
+        height: 100%;
+        opacity: 0;
+        transition-duration: 1.3s;
+        width: 100%;
+    }
+}
+.banner-top{
+    margin-top: 30px;
+    @media #{$default-tablet-width}{
+        margin-top: 20px;
+    }
+}
+.right-side-banner{
+    .banner-area{
+        .single-banner {
+            a{
+                display: block;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+/*==========================================
+=            Banner css area End           =
+============================================*/

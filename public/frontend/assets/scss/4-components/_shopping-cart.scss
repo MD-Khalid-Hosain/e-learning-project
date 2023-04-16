@@ -1,0 +1,239 @@
+/*============================================
+=      21. Shopping Cart Page Css Start      =
+=============================================*/
+.table-desc{
+    border: 1px solid $borderall;
+	margin-bottom: 50px;
+    & .cart-page{
+        & table{
+            width: 100%;
+            & thead{
+                & tr{
+                    & th{
+                        border-bottom: 3px solid $theme-color--default;
+                        border-right: 1px solid $borderall;
+                        font-size: 16px;
+                        font-weight: 600;
+                        text-transform: capitalize;
+                        padding: 10px;
+                        text-align: center;
+                    }
+                }
+            }
+            & tbody{
+                & tr{
+                    & td{
+                        border-bottom: 1px solid $borderall;
+                        border-right: 1px solid $borderall;
+                        text-align: center;
+                        padding: 10px;
+                        &.product-remove{
+                            min-width: 100px;
+                            & a{
+                                font-size: 20px;
+	                            color:  $heading-color-2;
+                                &:hover{
+                                    color: $theme-color--default;
+                                }
+                            }
+                        }
+                        &.product-thumb{
+                            max-width: 180px;
+                            &::before{
+                                display: none;
+                            }
+                       
+                        }
+                        &.product-name{
+                            min-width: 180px;
+                            & a{
+                                color: $heading-color-2;
+                                text-transform: capitalize;
+                                font-size: 14px;
+                                font-weight: 400;
+                                &:hover{
+                                    color:  $theme-color--default;
+                                }
+                            }
+                        }
+                        
+                        &.product-price{
+                            min-width: 130px;
+                            color: $heading-color-2;
+                            font-size: 16px;
+                            font-weight: 500;
+                        }
+                        &.product-quantity{
+                            min-width: 180px;
+                            & label{
+                                font-weight: 600;
+                                margin-right: 5px;
+                            }
+                            & input{
+                                width: 60px;
+                                height: 40px;
+                                padding: 0 5px 0 10px;
+                                background: none;
+                                border: 1px solid $borderall;
+                            }
+                        }
+                        & .product-total{
+                            min-width: 120px;
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+} 
+
+.cart-page table thead tr:last-child th,.table-desc table tbody tr td:last-child{
+    border-right: 0;
+}
+.cart-submit{
+    text-align: right;
+	padding: 12px;
+    & button{
+        background: $theme-color--default;
+        border: 0;
+        color: $white;
+        display: inline-block;
+        font-size: 12px;
+        font-weight: 600;
+        height: 38px;
+        line-height: 18px;
+        padding: 10px 15px;
+        text-transform: uppercase;
+        cursor: pointer;
+        border-radius: 3px;
+        &:hover{
+            background: $heading-color-2;
+        }
+    }
+}
+.coupon-inner{
+    padding: 10px 20px 25px;
+    & p{
+        font-size: 13px;
+        margin-bottom: 20px; 
+    }
+    & button{
+        background: $theme-color--default;
+        border: 0;
+        color: $white;
+        display: inline-block;
+        font-size: 12px;
+        font-weight: 600;
+        height: 38px;
+        line-height: 18px;
+        padding: 10px 15px;
+        text-transform: uppercase;
+        cursor: pointer;
+        border-radius: 3px;
+        &:hover{
+            background: $heading-color-2;
+        }
+    }
+    & input{
+        border: 1px solid $borderall;
+        height: 42px;
+        background: none;
+        padding: 0 20px;
+        margin-right: 20px;
+        font-size: 12px;
+        color: $heading-color-2;
+        @media #{$large-mobile}{
+           margin-bottom: 24px;
+            width: 100%;
+        }
+        @media #{$tablet-device}{
+           margin-bottom: 24px;
+            width: 100%;
+        }
+        
+    }
+    & a{
+        display: block;
+        text-align: right;
+        font-size: 14px;
+        font-weight: 500;
+        margin-bottom: 20px;
+        border-bottom: 1px solid $borderall;
+        padding-bottom: 10px;
+        border-radius: 3px;
+        &:hover{
+            color: $theme-color--default;
+        }
+    }
+}
+
+
+.coupon-code {
+    &.left{
+        @media #{$large-mobile}{
+           margin-bottom: 50px;
+        }
+    }
+	border: 1px solid $borderall;
+    & h3{
+        color: $white;
+        line-height: 36px;
+        padding: 5px 15px;
+        background: $theme-color--default;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: 600;
+        @media #{$large-mobile}{
+           line-height: 28px;
+            padding: 5px 15px;
+            font-size: 15px;
+        }
+    }
+}
+.cart-subtotal {
+	display: flex;
+	justify-content: space-between;
+    & p{
+        font-weight: 600;
+        font-size: 14px;
+        &.cart-amount {
+            font-size: 18px;
+	        font-weight: 500;
+            @media #{$large-mobile}{
+                font-size: 14px;
+            }   
+        }
+        & span{
+            margin-right: 30px;
+        }
+    }
+}
+.checkout-btn{
+    text-align: right;
+    & a{
+        background: $theme-color--default;
+        font-size: 15px;
+        color: $white;
+        padding: 3px 14px;
+        line-height: 30px;
+        font-weight: 500;
+        display: inline-block;
+        text-transform: capitalize;
+        margin-bottom: 0;
+        &:hover{
+            background: $heading-color-2;
+            color: $white;
+        }
+    }
+}
+
+.coupon-area{
+   margin-bottom: 20px;
+}
+.wishlist-margin{
+    margin-bottom: 20px;
+}
+/*============================================
+=         Shopping Cart Page Css End         =
+=============================================*/

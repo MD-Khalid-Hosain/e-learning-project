@@ -1,0 +1,82 @@
+/*======================================
+=         24. Compare CSS Start        =
+========================================*/
+.compare-table {
+    margin-bottom: 20px;
+    & .table {
+        margin-bottom: 0px;
+        & tbody {
+            & tr {
+                &:first-child {
+                    border-top: 1px solid $borderall;
+                }
+                & td {
+                    text-align: center;
+                    border: none;
+                    padding: 25px 30px;
+                    vertical-align: middle;
+                    border-bottom: 1px solid $borderall;
+                    border-left: 1px solid $borderall;
+                    &:last-child {
+                        border-right: 1px solid $borderall;
+                    }
+                    &.first-column {
+                        min-width: 180px;
+                        font-size: 17px;
+                        font-weight: 600;
+                        margin: 0;
+                        line-height: 1;
+                    }
+                    &.product-image-title {
+                        min-width: 305px;
+                        vertical-align: bottom;
+                        & .image {
+                            clear: both;
+                            width: 100%;
+                            & img {
+                                max-width: 100%;
+                            }
+                        }
+                        & .category {
+                            font-size: 16px;
+                        }
+                    }
+                    &.pro-desc {
+                        & p {
+                            text-align: left;
+                            margin: 0;
+                        }
+                    }
+                    &.pro-price {
+                        font-size: 15px;
+                        font-weight: 600;
+                    }
+                    &.pro-color {
+                        font-size: 15px;
+                        font-weight: 600;
+                    }
+                    &.pro-stock {
+                        font-size: 15px;
+                        font-weight: 600;
+                    }
+                    &.pro-remove {
+                        & button {
+                            border: none;
+                            background-color: transparent;
+                            padding: 0;
+                            & i {
+                                font-size: 20px;
+                            }
+                            &:hover{
+                                color:  $theme-color--default;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/*======================================
+=            Compare CSS End           =
+========================================*/

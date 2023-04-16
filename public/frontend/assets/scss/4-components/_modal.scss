@@ -1,0 +1,82 @@
+/*======================================
+=         29. Modal CSS Start          =
+========================================*/
+.modal-dialog.modal-dialog-centered {
+	min-width: 1100px;
+    @media #{$laptop-device }{
+       min-width: 1000px;
+    }
+    @media #{$desktop-device }{
+       min-width: 950px;
+    }
+    @media #{$tablet-device}{
+       min-width: 730px;
+    }
+    @media #{$large-mobile}{
+       min-width: 90%;
+    }
+}
+.modal_tab_img {
+	text-align: center;
+	margin-bottom: 10px;
+    & img{
+        margin: 0 auto;
+    }
+}
+.modal_tab_button{
+    & ul{
+        justify-content: space-around;
+        & li{
+            & a{
+                padding: 0;
+                border: 1px solid $border;
+                margin: 0 2px;
+                & img{
+                   width: 100%;  
+                }
+            }
+        }
+    }
+}
+.modal_body {
+	padding: 29px 6px 38px;
+    @media #{$large-mobile}{
+      padding: 42px 6px 38px;
+    }
+    & .modal_tab{
+         @media #{$large-mobile}{
+          margin-bottom: 30px;
+        }
+    }
+}
+.modal-content{
+    border-radius: 0;
+}
+.modal-content button.close {
+	position: absolute;
+	left: 94%;
+	width: 35px;
+    height: 35px;
+    line-height: 34px;
+	display: block;
+	border: 1px solid $border;
+	top: 10px;
+	border-radius: 50%;
+	cursor: pointer;
+    font-size: 18px;
+	z-index: 9;
+     @media #{$large-mobile}{
+       left: 83%;
+        width: 32px;
+        height: 32px;
+         line-height: 35px;
+        top: 4px;
+        margin-bottom: 14px;
+    }
+    &:hover{
+        color: $action-link;
+    }
+}
+/*======================================
+=             Modal CSS End            =
+========================================*/

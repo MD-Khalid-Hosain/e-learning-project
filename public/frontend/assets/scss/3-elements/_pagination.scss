@@ -1,0 +1,50 @@
+/* ======================================
+=         7. Pagination Css Start       =
+========================================= */
+.pagination{
+    ul {
+        display: flex;
+        li{
+            &.current{
+                padding: 5px 15px;
+                margin-right: 10px;
+                background: $theme-color--default;
+                border-radius: 5px;
+                color: $white;
+                @media #{$extra-small-mobile} {
+                    margin-right: 5px;
+                    padding: 5px 13px;
+                }
+            }
+            a{
+                font-size: 14px;
+                padding: 5px 15px;
+                display: block;
+                margin-right: 10px;
+                background: $secondary;
+                color: $white;
+                border-radius: 5px;
+                @media #{$extra-small-mobile} {
+                    margin-right: 3px;
+                    padding: 5px 13px;
+                }
+                &:hover{
+                    background: $theme-color--default;
+                }
+            }
+            &.previous{
+                i{
+                    margin-right: 3px;
+                }
+            }
+            &.next{
+                i{
+                    margin-left: 3px;
+                }
+            }
+        }
+    }
+}
+/* ======================================
+=           Pagination Css End          =
+========================================= */

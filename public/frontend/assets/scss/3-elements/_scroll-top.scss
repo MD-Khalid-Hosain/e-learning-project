@@ -1,0 +1,43 @@
+/* ======================================
+=         5. Scroll Top Css Start       =
+========================================= */
+.scroll-to-top{
+    background-color: $action-link;
+    color: $white;
+    position: fixed;
+    right: 50px;
+	bottom: 50px;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+    z-index: 999;
+    font-size: 20px;
+    overflow: hidden;
+    display: block;
+	text-align: center;
+	opacity: 0;
+	visibility: hidden;
+    animation-duration: 1s;
+    animation-name: fadeInDown;
+    transition: .3s;
+	&.show{
+		opacity: 1;
+		visibility: visible;
+		animation-duration: 1s;
+        animation-name: fadeInDown;
+	}
+	i{
+		color: $white;
+		font-size: 20px;
+		display: inline-block;
+	}
+	&:hover{
+		> i{
+			animation-duration: 1s;
+            animation-name: fadeInUp;
+		}
+	}
+}
+/* ======================================
+=          Scroll Top Css End         =
+========================================= */

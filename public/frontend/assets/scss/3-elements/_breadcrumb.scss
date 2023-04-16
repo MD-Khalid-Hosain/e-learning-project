@@ -1,0 +1,50 @@
+/*======================================
+=        6. Breadcrumb CSS Start       =
+========================================*/
+.breadcrumbs_area{
+    padding: 25px 0;
+    background: $theme-color--breadcrumb;
+ }
+ 
+ .breadcrumb_content{
+     & ul{
+         & li{
+             display: inline-block;
+             text-transform: capitalize;
+             font-size: 14px;
+             margin-right: 5px;
+             padding-right: 5px;
+             position: relative;
+             color:  $theme-color--heading;
+             &::before{
+                 position: absolute;
+                 content: "/";
+                 right: -4px;
+                 top: 50%;
+                 transform: translatey(-50%);
+             }
+             &:last-child{
+                 margin-right: 0;
+                 &::before{
+                     display: none;
+                 }
+             }
+             & a{
+                 color: $theme-color--heading;
+                 &:hover{
+                     color:  $theme-color--default;
+                 }
+             }
+             h1{
+                display: inline-block;
+                text-transform: capitalize;
+                font-size: 14px;
+                position: relative;
+                color:  $theme-color--heading;
+             }
+         }
+     }
+ }
+/*======================================
+=         Breadcrumb CSS End           =
+========================================*/

@@ -1,0 +1,454 @@
+/*=========================================
+=          9. Slider Area Start           =
+===========================================*/
+.single_slider{
+    position: relative;
+    .slider_content{
+        position: absolute;
+        top: calc(50% - 170px);
+        left: 12%;
+        transition: 1s;
+        @media #{$desktop-device, $default-tablet-width}{
+            top: calc(50% - 153px);
+        }
+        @media #{$large-mobile}{
+            top: calc(50% - 111px);
+        }
+        @media #{$small-mobile}{
+            top: calc(50% - 90px);
+            left: 10%;
+        }
+        @media #{$extra-small-mobile}{
+            top: calc(50% - 70px); 
+        }
+        h5{
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 50px;
+            @media #{$desktop-device, $default-tablet-width}{
+                margin-bottom: 30px;
+            }
+            @media #{$large-mobile}{
+                margin-bottom: 20px;
+                font-size: 14px;
+            }
+            @media #{$small-mobile}{
+                margin-bottom: 12px;
+                font-size: 16px;
+            }
+            @media #{$extra-small-mobile}{
+                margin-bottom: 5px;
+                font-size: 12px;
+            }
+        }
+        h2{
+            font-size: 48px;
+            line-height: 50px;
+            font-weight: 600;
+            @media #{$desktop-device, $default-tablet-width}{
+                font-size: 40px;
+            }
+            @media #{$large-mobile}{
+                font-size: 30px;
+                line-height: 30px;
+            }
+            @media #{$small-mobile}{
+                font-size: 22px;
+                line-height: 22px;
+            }
+            @media #{$extra-small-mobile}{
+                font-size: 16px;
+                line-height: 16px;
+            }
+        }
+        a{
+            background: $slid-btn;
+            color: $white;
+            font-size: 12px;
+            font-weight: 900;
+            text-transform: uppercase;
+            display: inline-block;
+            line-height: 41px;
+            padding: 0 26px;
+            margin: 54px 0 0;
+            border-radius: 3px;
+            &:hover{
+                background: $theme-color--black;
+            }
+            @media #{$desktop-device, $default-tablet-width}{
+                margin-top: 40px;
+            }
+            @media #{$large-mobile}{
+                margin-top: 20px;
+            }
+            @media #{$small-mobile}{
+                margin-top: 14px;
+                padding: 0 10px;
+                line-height: 26px;
+                font-size: 10px;
+            }
+        }
+        .pt-des{
+            p{
+                margin-top: 15px;
+                margin-bottom: 10px;
+                font-size: 20px;
+                font-weight: 700;
+                @media #{$large-mobile}{
+                    font-size: 16px;
+                }
+                @media #{$small-mobile}{
+                    font-size: 14px;
+                }
+                @media #{$extra-small-mobile}{
+                    font-size: 12px;
+                    margin-top: 10px;
+                    margin-bottom: 0px;
+                }
+                span:first-child{
+                    color: $white;
+                    font-size: 12px;
+                    margin-right: 20px;
+                    font-weight: 700;
+                    padding: 6px 5px;
+                    position: relative;
+                    &:after{
+                        content: "";
+                        border-top: 13px solid transparent;
+                        border-bottom: 13px solid transparent;
+                        border-right: 10px solid transparent;
+                        position: absolute;
+                        top: 0;
+                        right: -20px;
+                    }
+                }
+            }
+        }
+    }
+    .color{
+        &_one{
+            h5, h2{
+                color: $white;
+            }
+            .pt-des{
+                p{
+                    color: $white;
+                    span:last-child{
+                        color: $mix-primary;
+                    }
+                    span:first-child{
+                        background: $mix-primary;
+                        &:after{
+                            border-left: 10px solid $mix-primary;
+                        }
+                    }
+                }
+            }
+        }
+        &_two{
+            h5{
+                color: $slid-btn;
+            }
+            .pt-des{
+                p{
+                    span:last-child{
+                        color: $mix-slid;
+                    }
+                    span:first-child{
+                        background: $mix-slid;
+
+                        &:after{
+                            border-left: 10px solid $mix-slid;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.slick-active{
+    .slider_content{
+        h5, a, .pt-des{
+            animation-duration: 1s;
+            animation-name: bounceInLeft;
+        }
+        .pt-des{
+            animation-duration: 2s;
+            animation-name: bounceInLeft;
+        }
+        a{
+            animation-duration: 1.5s;
+            animation-name: bounceInLeft;
+        }
+        .slider-text{
+            animation-duration: 2.5s;
+            animation-name: bounceInLeft;
+        }
+    }
+}
+.slider-one{
+    .slick-dots{
+        left: 5%;
+        @media #{$extra-small-mobile}{
+            left: 50%;
+            bottom: 5px;
+        }
+    }
+}
+.slick-dots {
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+    left: 50%;
+    transform: translatex(-50%);
+    display: block;
+    @media #{$large-mobile}{
+        bottom: 10px;
+    }
+    li.slick-active {
+        background: $white;
+        border-color: $theme-color--default !important;
+        transform: scale3d(.8, .8, .8);
+    }
+    li {
+        display: inline-block;
+        margin: 0 3px;
+        cursor: pointer;
+        font-size: 0;
+        width: 20px;
+        height: 20px;
+        background: $white !important;
+        border: 5px solid $theme-color--heading !important;
+        transform: scale3d(0.7, 0.7, 0.7);
+        border-radius: 100%;
+        transition: all 300ms linear;
+        button{
+            background: none;
+            border: none;
+        }
+        @media #{$large-mobile}{
+            margin: 0px;
+        }
+    }
+}
+/*---- Full Width Slider Css Start -----*/
+.slider-two{
+    .hero-bg-1{
+        background-image: url("../../assets/images/slider/slider2-2.jpg");
+    }
+    .hero-bg-2{
+        background-image: url("../../assets/images/slider/slider2-1.png");
+    }
+    .hero-bg-3{
+        background-image: url("../../assets/images/slider/slider3-2.png");
+    }
+    .hero-bg-4{
+        background-image: url("../../assets/images/slider/slider3-1.png");
+    }
+    .single_slider{
+        background-size: cover;
+        background-position: center center;
+        position: relative;
+        overflow: hidden;
+        display: block !important;
+        height: 540px;
+        @media #{$laptop-device}{
+            height: 415px;
+        }
+        @media #{$desktop-device}{
+            height: 340px;
+        }
+        @media #{$default-tablet-width}{
+            height: 285px;
+        }
+        @media #{$large-mobile}{
+            height: 218px;
+            background-position: 5%;
+        }
+        @media #{$small-mobile}{
+            height: 164px;
+        }
+        @media #{$extra-small-mobile}{
+            height: 137px;
+        }
+    }
+}
+.slider-tools{
+    .single_slider{
+        .slider_content{
+            left: 37%;
+            @media #{$laptop-device}{
+                left: 32%;
+                top: calc(50% - 156px);
+            }
+            @media #{$desktop-device}{
+                left: 32%;
+                top: calc(50% - 125px);
+            }
+            @media #{$default-tablet-width}{
+                left: 20%;
+                top: calc(50% - 100px);
+            }
+            @media #{$large-mobile}{
+                top: calc(50% - 80px);
+            }
+            @media #{$small-mobile}{
+                top: calc(50% - 62px);
+            }
+            @media #{$extra-small-mobile}{
+                top: calc(50% - 42px);
+                left: 10%;
+            }
+
+            h5{
+                @media #{$laptop-device}{
+                    margin-bottom: 35px;
+                }
+                @media #{$desktop-device}{
+                    font-size: 18px;
+                    margin-bottom: 20px;
+                }
+                @media #{$default-tablet-width}{
+                    font-size: 16px;
+                    margin-bottom: 10px;
+                }
+                @media #{$large-mobile}{
+                    font-size: 14px;
+                    margin-bottom: 3px;
+                }
+                @media #{$small-mobile}{
+                    font-size: 10px;
+                    margin-bottom: 0px;
+                }
+
+            }
+            h2{
+                @media #{$desktop-device}{
+                    font-size: 34px;
+                    line-height: 36px;
+                }
+                @media #{$default-tablet-width}{
+                    font-size: 26px;
+                    line-height: 30px;
+                }
+                @media #{$large-mobile}{
+                    font-size: 20px;
+                    line-height: 22px;
+                }
+                @media #{$small-mobile}{
+                    font-size: 18px;
+                    line-height: 20px;
+                }
+                @media #{$extra-small-mobile}{
+                    display: none;
+                }
+            }
+            a{
+                @media #{$laptop-device}{
+                    margin-top: 40px;
+                }
+                @media #{$desktop-device}{
+                    padding: 0px 18px;
+                    margin-top: 30px;
+                }
+                @media #{$default-tablet-width}{
+                    padding: 0px 15px;
+                    margin-top: 15px;
+                    font-size: 10px;
+                    line-height: 30px;
+                }
+                @media #{$large-mobile}{
+                    margin-top: 5px;
+                }
+                @media #{$small-mobile}{
+                    margin-top: 0px;
+                    margin-bottom: 5px;
+                    padding: 0px 5px;
+                    line-height: 24px;
+                    font-size: 8px;
+                }
+                
+            }
+            .pt-des{
+                p{
+                    @media #{$default-tablet-width}{
+                        font-size: 18px;
+                        font-weight: 600;
+                    }
+                    @media #{$large-mobile}{
+                        font-size: 16px;
+                        margin-top: 10px;
+                    }
+                    @media #{$small-mobile}{
+                        font-size: 14px;
+                        margin-top: 5px;
+                        margin-bottom: 5px;
+                    }
+                    @media #{$extra-small-mobile}{
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+.slider-three {
+    .single_slider {
+        @media #{$large-mobile}{
+            background-position: 5%;
+        }
+        .slider_content {
+            left: 20% !important;
+            top: 21%;
+            @media #{$laptop-device}{
+                top: 14%;
+            }
+            @media #{$desktop-device}{
+                top: 12%;
+            }
+            @media #{$default-tablet-width}{
+                top: 13%;
+            }
+            @media #{$large-mobile}{
+                top: 20%;
+            }
+            @media #{$small-mobile}{
+                top: 16%;
+            }
+            @media #{$extra-small-mobile}{
+                top: 24%;
+            }
+            .slider-text{
+                font-size: 16px;
+                width: 700px;
+                margin-top: 20px;
+                @media #{$desktop-device}{
+                    width: 580px;
+                    margin-top: 15px;
+                    line-height: 20px;
+                }
+                @media #{$default-tablet-width}{
+                    width: 400px;
+                    margin-top: 10px;
+                    line-height: 18px;
+                    font-size: 14px
+                }
+                @media #{$large-mobile}{
+                    display: none;
+                }
+            }
+            a{
+                @media #{$desktop-device}{
+                    margin-top: 20px;
+                }
+                @media #{$default-tablet-width}{
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}
+/*=========================================
+=             Slider Area End             =
+===========================================*/
+

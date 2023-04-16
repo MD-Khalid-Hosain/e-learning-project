@@ -1,0 +1,244 @@
+/*======================================
+=            1. Default styles         =
+========================================*/
+
+/*-- Google Font --*/
+@import url("https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i&amp;subset=latin-ext");
+
+ 
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+html,
+body {
+    height: 100%;
+}
+body {
+    font-family: $font-family-name;
+    font-size: $body-font-size;
+    font-weight: $body-font-weight;
+    font-style: normal;
+    line-height: $body-line-height;
+
+    position: relative;
+
+    visibility: visible;
+
+    color: $body-text-color;
+    background-color: $body-bg-color;
+
+    &.no-overflow {
+        overflow: hidden;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $heading-font-family-name;
+    font-weight: $heading-font-weight;
+    line-height: 1;
+
+    margin-top: 0;
+    margin-bottom: 0;
+
+    color: $theme-color--heading;
+}
+h1 {
+    font-size: 56px;
+}
+h2 {
+    font-size: 48px;
+    @media #{$desktop-device} {
+        font-size: 36px;
+    }
+    @media #{$tablet-device} {
+        font-size: 36px;
+    }
+    @media #{$large-mobile} {
+        font-size: 30px;
+    }
+}
+h3 {
+    font-size: 40px;
+    @media #{$desktop-device} {
+        font-size: 32px;
+    }
+    @media #{$tablet-device} {
+        font-size: 28px;
+    }
+    @media #{$large-mobile} {
+        font-size: 25px;
+    }
+}
+h4 {
+    font-size: 28px;
+    @media #{$tablet-device} {
+        font-size: 25px;
+    }
+    @media #{$large-mobile} {
+        font-size: 20px;
+    }
+}
+h5 {
+    font-size: 24px;
+}
+h6 {
+    font-size: 16px;
+}
+p:last-child {
+    margin-bottom: 0;
+}
+p{
+    font-size: 14px;
+    color: #3d3d3d;
+    line-height: 24px;
+    margin: 0px;
+    padding: 0px;
+}
+a,
+button {
+    line-height: inherit;
+
+    display: inline-block;
+
+    cursor: pointer;
+    text-decoration: none;
+
+    color: inherit;
+}
+a,
+button,
+img,
+input,
+span {
+    transition: $transition--default;
+}
+*:focus {
+    outline: none !important;
+}
+a:focus {
+    text-decoration: none;
+
+    color: inherit;
+    outline: none;
+}
+a:hover {
+    text-decoration: none;
+
+    color: $theme-color--default;
+}
+button,
+input[type="submit"] {
+    cursor: pointer;
+}
+ul {
+    margin: 0;
+    padding: 0;
+
+    list-style: outside none none;
+}
+.theme-bg{
+    background: $theme-color--default;
+}
+.full-border{
+    border-bottom: 1px solid #ebebeb;
+}
+.no-background{
+    background: none !important;
+}
+.no-border-bottom{
+    border-bottom: 0px !important;
+}
+.btn-secondary:not(:disabled):not(.disabled){
+    &:active{
+        &:focus{
+            box-shadow: none !important;
+        }
+    }
+    &:focus{
+        box-shadow: none !important;
+    }
+    
+}
+// Padding & Margin
+.no-margin-bottom{
+    margin-bottom: 0px !important;
+}
+.space-40{
+    padding: 40px 0px;
+}
+.pl-10{
+    padding-left: 10px
+}
+.pt-20{
+    padding-top: 20px;
+}
+.pb-15{
+    padding-bottom: 15px;
+}
+.pb-20{
+    padding-bottom: 20px;
+}
+.mb-0{
+    margin-bottom: 0px;
+}
+.mb-10{
+    margin-bottom: 10px;
+}
+.mb-15{
+    margin-bottom: 15px;
+}
+.mb-20{
+    margin-bottom: 20px;
+}
+.mb-30{
+    margin-bottom: 30px;
+}
+.mb-35{
+    margin-bottom: 35px;
+}
+.mb-40{
+    margin-bottom: 40px;
+}
+.mb-45{
+    margin-bottom: 45px;
+}
+.mb-50{
+    margin-bottom: 50px;
+}
+.mt-10{
+    margin-top: 10px;
+}
+.mt-15{
+    margin-top: 15px;
+}
+.mt-20{
+    margin-top: 20px;
+}
+.mt-25{
+    margin-top: 25px;
+}
+.mt-30 {
+    margin-top: 30px;
+}
+.mt-35 {
+    margin-top: 35px;
+}
+.mt-40{
+    margin-top: 40px;
+}
+.mt-45{
+    margin-top: 45px;
+}
+.mt-50 {
+    margin-top: 50px;
+}
+/*======================================
+=            Default CSS End           =
+========================================*/

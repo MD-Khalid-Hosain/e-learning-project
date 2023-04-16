@@ -1,0 +1,100 @@
+/*============================================
+=       13. Product Category css start       =
+=============================================*/
+.category-tabs {
+    border: 1px solid $borderbottom;
+    li {
+        background: url(../images/bg/line.png) no-repeat center right;
+        width: 16.6666%;
+        font-size: 16px;
+        font-weight: 700;
+        text-align: center;
+        position: relative;
+        &:nth-last-child(1){
+            background: none;
+        }
+        @media #{$tablet-device, $large-mobile}{
+            width: 33.3%;
+            &:nth-last-child(4){
+                background: none;
+            }
+        }
+        @media #{$extra-small-mobile}{
+            width: 50%;
+            &:nth-last-child(3){
+                background: none;
+            }
+            &:nth-last-child(5){
+                background: none;
+            }
+            &:nth-last-child(4){
+                background: url(../images/bg/line.png) no-repeat center right;
+            }
+        }
+        span {
+            display: inline-block;
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+        }
+        &:hover{
+            background: $theme-color--default;
+            border-radius: 10px;
+            transition: $transition--default;
+            span{
+                color: $white;
+                img{
+                    filter: brightness(0) invert(1);
+                }
+            }
+        }
+        a{
+            padding: 25px 0px;
+            transition: .1s;
+            @media #{$desktop-device, $default-tablet-width}{
+                font-size: 14px;
+            }
+            @media #{$extra-small-mobile}{
+                font-size: 12px;
+                padding: 15px 0px;
+            }
+            &:before{
+                content: "";
+                border-left: 14px solid transparent;
+                border-right: 14px solid transparent;
+                border-bottom: 7px solid transparent;
+                border-top: 9px solid transparent;
+                position: absolute;
+                bottom: -20px;
+                left: 42%;
+            }
+            &:hover:before{
+                border-top: 15px solid $theme-color--default;
+            }
+        }
+        .active{
+            background-color: $theme-color--default !important;
+            border-radius: 10px;
+            transition: $transition--default;
+            span{
+                color: $white;
+                img{
+                    filter: brightness(0) invert(1);
+                }
+            }
+            &:before{
+                content: "";
+                border-left: 14px solid transparent;
+                border-right: 14px solid transparent;
+                border-bottom: 7px solid transparent;
+                border-top: 15px solid $theme-color--default;
+                position: absolute;
+                bottom: -20px;
+                left: 42%;
+            }
+        }
+    }
+}
+/*============================================
+=         Product Category css End          =
+=============================================*/

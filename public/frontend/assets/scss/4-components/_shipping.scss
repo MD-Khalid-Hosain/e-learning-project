@@ -1,0 +1,89 @@
+/*============================================
+=         10. Shipping css area start        =
+=============================================*/
+.all-shipping {
+	background: $same-white;
+    overflow: hidden;
+    margin-top: 20px;
+    border: 1px solid $borderbottom;
+    border-radius: 3px 3px;
+    padding: 9px 0;
+}
+.single-shipping {
+	text-align: center;
+    position: relative;
+    &:after {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        margin-top: -20px;
+        content: "";
+        height: 40px;
+        width: 1px;
+        background: $border;
+        @media #{$desktop-device, $tablet-device}{
+            right: -15px;
+        }
+        @media #{$large-mobile}{
+            background: none;
+        }
+    }
+    &.single-shipping-last{
+        &:after{
+            background: initial;
+        }
+    }
+}
+.block-wrapper, .block-wrapper2, .block-wrapper3 {
+	display: inline-block;
+	vertical-align: top;
+	background: url(../../assets/images/icon/icon1.png) left center no-repeat;
+	padding-left: 56px;
+	padding-top: 15px;
+	padding-bottom: 16px;
+}
+.block-wrapper2{
+    background: url(../../assets/images/icon/icon2.png) left center no-repeat;
+}
+.block-wrapper3{
+    background: url(../../assets/images/icon/icon3.png) left center no-repeat;
+}
+.shipping-content{
+    .ship-title{
+        color: $heading-text-color;
+        font-weight: 600;
+        text-transform: capitalize;
+        margin: 0;
+        font-size: 16px;
+        line-height: 20px;
+        display: block;
+        text-align: left;
+        @media #{$desktop-device, $tablet-device}{
+            font-size: 15px;
+        }
+    }
+    p {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 25px;
+        padding-top: 0;
+        color: $ship;
+        @media #{$desktop-device, $tablet-device}{
+            font-size: 12px;
+        }
+    }
+}
+.single-delivery{
+    width: 33%;
+    display: inline-block;
+    border: 1px solid $border;
+    margin-bottom: 10px;
+    padding: 10px;
+    @media #{$large-mobile}{
+        width: 100%;
+        display: block;
+    }
+}
+/*============================================
+=           Shipping css area End            =
+=============================================*/

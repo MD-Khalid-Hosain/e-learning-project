@@ -1,0 +1,247 @@
+/*=============================================
+=         8. Offcanvas Menu CSS Start         =
+=============================================*/
+.offcanvas_overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 99999;
+    opacity: 0;
+    visibility: hidden;
+    cursor: crosshair;
+    background: $body-text-color;
+    top: 0;
+
+    &.active {
+        opacity: 0.7;
+        visibility: visible;
+    }
+}
+.offcanvas_menu {
+    display: none;
+
+    @media #{$tablet-device, $large-mobile}{
+        display: block;
+    }
+}
+.offcanvas_menu_wrapper {
+    width: 310px;
+    position: fixed;
+    background: $white;
+    z-index: 999999;
+    top: 0;
+    height: 100vh;
+    transition: .5s;
+    left: 0;
+    margin-left: -310px;
+    padding: 50px 15px 30px;
+    overflow-y: auto;
+
+    &.active {
+        margin-left: 0;
+    }
+    .slinky-theme-default {
+        background: inherit;
+        min-height: 300px;
+        overflow-y: auto;
+    }
+    .search-container {
+        display: block;
+    }
+    .customer_support {
+        display: flex;
+    }
+    .search_box {
+        position: relative;
+        width: 100%;
+        border: 1px solid $border;
+        border-radius: 5px;
+    }
+    input {
+        font-size: 12px;
+        padding: 0 92px 0 10px;
+        width: 100%;
+        height: 34px;
+        border: 0;
+        background: inherit;
+        color: #222222;
+        font-weight: 400;
+        opacity: 0.7;
+    }
+    button{
+        min-width: 78px;
+        padding: 0 14px;
+        top: -1px;
+        bottom: -1px;
+        right: -1px;
+        font-size: 12px;
+        text-transform: uppercase;
+        border: 0;
+        position: absolute;
+        background: $theme-color--default;
+        color: $white;
+        font-weight: 500;
+        border-radius: 0 5px 5px 0;
+    }
+    .box-right{
+        float: none;
+            li{
+                a{
+                  padding: 10px 5px;
+                }
+            }
+    }
+}
+.offcanvas_menu_cover{
+    float: left;
+    width: 100%;
+}
+.offcanvas_main_menu{
+    & > li{
+        &.menu-item-has-children{
+            &.menu-open{
+              & > span{
+                  &.menu-expand{
+                      transform: rotate(180deg);
+                  }
+              }
+            }
+        }    
+    }
+}
+.offcanvas_main_menu{
+    & > li{
+        ul{
+            li{
+                &.menu-item-has-children{
+                    &.menu-open{
+                        span{
+                            &.menu-expand{
+                              transform: rotate(180deg);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.offcanvas_main_menu {
+    li{
+        position: relative;
+
+        &:last-child > {
+            a{
+                border-bottom: 0px;
+            }
+        }
+
+        span{
+            &.menu-expand{
+              position: absolute;
+              right: 0px;
+            }
+        }
+        a{
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: capitalize;
+            display: block;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid $border;
+
+            &:hover{
+                color: $theme-color--default;
+            }
+        }
+
+        ul{
+            &.sub-menu{
+                padding-left: 20px;
+            }
+        }
+    }
+} 
+.offcanvas_footer {
+    margin-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+
+    span{
+        &a{
+            font-size: 14px;
+        }
+    }
+    ul{
+        margin-top: 20px;
+        li{
+            a{
+                margin-right: 15px;
+            }
+        }
+    }
+} 
+.canvas_close {
+    position: absolute;
+    top: 10px;
+    right: 13px;
+    a{
+        font-size: 18px;
+        text-transform: uppercase;
+        font-weight: 500;
+        width: 32px;
+        height: 32px;
+        display: block;
+        text-align: center;
+        line-height: 31px;
+        border: 1px solid $border;
+        border-radius: 100%;
+        &:hover{
+            background: $theme-color--default;
+            border-color: $theme-color--default;
+            color: $white;
+        }
+    }
+}
+.canvas_open {
+    position: absolute;
+    right: 17px;
+    top: 150px;
+    z-index: 9;
+    a{
+        font-size: 30px;
+        width: 43px;
+        height: 40px;
+        display: block;
+        line-height: 39px;
+        text-align: center;
+        border: 1px solid $white;
+        color: $white;
+
+        @media #{$large-mobile}{
+            width: 32px;
+            height: 32px;
+            line-height: 31px;
+            font-size: 25px;
+        }
+    }
+    @media #{$large-mobile}{
+        top: 155px;
+        right: 20px;
+  }
+    @media #{$extra-small-mobile}{
+        top: 115px !important;
+    }
+}
+.offcanvas_menu_two{
+    .canvas_open{
+        a{
+            border-color: $theme-color--default;
+            color: $theme-color--default;
+        }
+    }
+}
+/*=============================================
+=           Offcanvas Menu CSS End          =
+=============================================*/

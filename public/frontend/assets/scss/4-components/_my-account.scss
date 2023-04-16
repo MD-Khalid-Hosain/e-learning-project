@@ -1,0 +1,54 @@
+/*======================================
+=       25. My Account CSS Start       =
+========================================*/
+.dashboard-list {
+    padding: 3px 15px;
+    border: 1px solid $borderall;
+    li:not(:last-child)>a {
+        border-bottom: 1px solid $borderall;
+    }
+    li{
+        & > a{
+            padding: 12px 0px;
+        }
+    }
+}
+.dashboard-content {
+    border: 1px solid $borderall;
+    padding: 30px;
+    @media #{$default-tablet-width} {
+        margin-top: 20px;
+    }
+    .last-title{
+        border-bottom: 1px solid $borderall;
+        padding-bottom: 15px;
+    }
+    table{
+        margin-bottom: 0px;
+        tbody{
+            td{
+                vertical-align: middle;
+            }
+        }
+        thead{
+            th{
+                border-top: 0px;
+                border-bottom: 1px solid $borderall;
+            }
+            td{
+                line-height: 42px;
+            }
+        }
+    }
+    .billing-address {
+        font-size: 16px;
+        margin-top: 20px;
+    }
+    .checkout_info{
+        border: none;
+        padding: 0px;
+    }
+}
+/*======================================
+=            My Account CSS End        =
+========================================*/

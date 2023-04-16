@@ -1,0 +1,228 @@
+/*======================================
+=            3. Footer CSS Start       =
+=======================================*/
+.newsletter-group{
+    background-color: $theme-color--default;
+    padding: 35px 0px;
+}
+.newsletter-inner{
+    i{
+        font-size: 60px;
+        color: $white;
+        font-weight: 400;
+        line-height: 60px;
+        margin-right: 30px;
+        @media #{$desktop-device}{
+            margin-right: 15px
+        }
+        @media #{$extra-small-mobile}{
+            font-size: 50px;
+            margin-right: 10px
+        }
+    }
+
+    .newsletter-title{
+        .sign-title{
+            font-size: 30px;
+            color: $white;
+            margin-bottom: 10px;
+            @media #{$extra-small-mobile}{
+                font-size: 18px;
+                margin-bottom: 5px;
+            }
+        }
+        p{
+            color: $white;
+            @media #{$extra-small-mobile}{
+                line-height: 14px;
+                font-size: 13px;
+            }
+        }
+    }
+}
+.newsletter-box{
+    display: block;
+    overflow: hidden;
+    position: relative;
+    @media #{$default-tablet-width}{
+        margin-top: 5%;
+    }
+    .mc-form{
+        display: flex;
+    }
+    .email-box{
+        width: 76%;
+        height: 50px;
+        border: none;
+        border-radius: 30px 0px 0px 30px;
+        padding: 10px 10px 10px 20px;
+        margin-right: 0px;
+    }
+    .newsletter-btn {
+        padding: 10px 33px;
+        line-height: 30px;
+        text-transform: capitalize;
+        font-size: 16px;
+        font-weight: 700;
+        color: $body-text-color;
+        background: $subscribe;
+        border: 0;
+        border-radius: 0 30px 30px 0;
+        @media #{$small-mobile}{
+            padding: 10px 20px;
+        }
+        @media #{$extra-small-mobile}{
+            padding: 10px 10px;
+            font-size: 14px;
+        }
+        &:hover{
+            background: $theme-color--black;
+            color: $white;
+        }
+    }
+}
+
+.footer_social{
+    ul{
+        li{
+            a{
+                background: #000;
+                height: 40px;
+                width: 40px;
+                margin-right: 20px;
+                position: relative;
+                line-height: 3;
+                text-align: center;
+                align-items: center;
+                border-radius: 5px;
+                i{
+                    font-size: 18px;
+                    color: $white;
+                }
+                &.facebook{
+                    background: $facebook;
+                }
+                &.twitter{
+                    background: $twitter;
+                }
+                &.youtube{
+                    background: $youtube;
+                }
+                &.google{
+                    background: $google;
+                }
+                &.linkedin{
+                    background: $linkedin;
+                }
+                &:hover{
+                    background: $theme-color--black;
+                }
+            }
+        }
+    }
+}
+.widgets_container{
+    @media #{$large-mobile, $small-mobile}{
+            margin-bottom: 20px;
+    }
+    h6{
+        margin-bottom: 35px;
+        font-size: 18px;
+        font-weight: 700;
+        color: $theme-color--black;
+        @media #{$large-mobile, $small-mobile}{
+            margin-bottom: 15px;
+        }
+    }
+    ul{
+        li{
+            line-height: 36px;
+            a{
+                font-size: 14px;
+
+                &:hover{
+                    padding-left: 5px;
+                }
+            }
+        }
+    }
+}
+.widget-single-box{
+    display: flex;
+    @media #{$desktop-device}{
+        margin-top: 10px;
+    }
+    @media #{$large-mobile}{
+        display: inline-block;
+        float: left;
+        width: 25%;
+    }
+    @media #{$extra-small-mobile}{
+        width: 50%;
+    }
+    p{
+        line-height: 28px;
+    }
+    ul{
+        display: inherit;
+        li{
+            @media #{$default-tablet-width}{
+                line-height: 12px;
+                padding: 8px 0px 10px 0px;
+                display: block;
+            }
+            a{
+                padding: 0px 10px;
+                border-right: 1px solid $borderright;
+                line-height: 1;
+                @media #{$large-mobile}{
+                    border-right: 0px;
+                }
+                @media #{$desktop-device, $default-tablet-width}{
+                    padding: 0px 5px;
+                    font-size: 12px;    
+                }
+            }
+            &:last-child{
+                a{
+                    border-right: 0px;
+                }
+            }
+        }
+    }
+}
+.footer-bottom{
+    border-top: 1px solid $border;
+    padding: 20px 0px;
+}
+
+@media #{$default-tablet-width}{
+    .footer-single-widget{
+        margin-bottom: 30px;
+    }
+    .footer-bottom-content{
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .payment{
+        text-align: center;
+        margin-bottom: 10px;
+    }
+}
+@media #{$large-mobile, $small-mobile}{
+    .widgets_container{
+        margin-bottom: 20px;
+    }
+}
+@media #{$large-mobile}{
+    .widget-box{
+        margin-top: 0px;
+    }
+}
+@media #{$small-mobile}{
+}
+@media #{$extra-small-mobile}{
+}
+/*======================================
+=            Footer CSS End          =
+=======================================*/
